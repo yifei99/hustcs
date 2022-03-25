@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\DataStructure.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\Global.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\NetworkService.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\RandomEventEnum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\RdtReceiver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\RdtSender.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\Tool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\SRRdtSender.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\SRRdtReceiver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\SR.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\SRRdtReceiver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\SRRdtSender.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

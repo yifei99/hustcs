@@ -1,0 +1,217 @@
+.386
+DATA   SEGMENT  USE16
+BNAME  DB   'LIANGYIFEI'      ;老板姓名
+BPASS  DB   '991026'           ;密码
+SNAME  DB   'FEISHOP',0DH,0AH,'$'               ;网店名称，用0结束
+N      EQU   30
+TAG    DB   '$'
+POINT  DB   'print username and password:',0DH,0AH,'$'
+TIP    DB   'MISMATCH!',0DH,0AH,'$'
+TIP2   DB   'NOT FOUND!TRY AGAIN!',0DH,0AH,'$'
+POINT2 DB   'Tell me what you want:',0DH,0AH,'$'
+TAG2   DB   0DH,0AH,'$'
+IN_NAME DB  11
+        DB  ?
+		DB  11 DUP(0)
+IN_PWD  DB  7
+        DB  ?
+		DB  7 DUP(0)
+IN_GA   DB  11
+        DB  0
+		DB  11 DUP(0)
+AUTH    DB  ?
+I      DB  0
+J      DB  0
+GA1    DB  'PEN',7 DUP(0) ,10  	;商品名称及折扣
+       DW   35,56,70,25,?   ;推荐度还未计算
+GA2    DB  'BOOK', 6 DUP(0) ,9  	;商品名称及折扣
+       DW   12,30,25,5,?       ;推荐度还未计算
+GAN    DB    N-2 DUP('Temp-Value',8,15,0,20,0,30,0,2,0,?,?)
+DATA   ENDS
+STACK  SEGMENT  USE16 STACK
+       DB  200  DUP(0)
+STACK  ENDS
+CODE   SEGMENT  USE16
+       ASSUME   CS:CODE, DS:DATA, SS:STACK
+START:MOV AX,DATA
+      MOV DS,AX
+	  LEA DX,SNAME
+	  MOV AH,9
+	  INT 21H
+FUN1: LEA DX,POINT
+	  MOV AH,9
+	  INT 21H
+      LEA DX,IN_NAME
+	  MOV AH,10
+	  INT 21H
+	  LEA DX,TAG2
+	  MOV AH,9
+	  INT 21H
+	  MOV CL,IN_NAME[1]
+	  CMP CL,0
+	  JE  T1
+	  CMP CL,1
+	  JE  ISQ
+	  JMP IPW
+ISQ:  MOV CL,IN_NAME[2]
+	  CMP CL,'q'
+	  JE  QUIT
+IPW:  LEA DX,IN_PWD
+	  MOV AH,10
+	  INT 21H
+	  LEA DX,TAG2
+	  MOV AH,9
+	  INT 21H
+FUN2_1: MOV CL,IN_NAME[1]
+      CMP CL,10
+	  JNE T2
+	  MOV DI,10
+	  JMP LOPA1
+FUN2_2: MOV CL,IN_PWD[1]
+        CMP CL,6
+		JNE T2
+		MOV DI,6
+		JMP LOPA2
+LOPA1:MOV CL,BNAME[DI-1]
+	  CMP CL,IN_NAME[DI+1]
+	  JNE T2
+	  DEC DI
+	  CMP DI,0
+	  JNE LOPA1
+	  JMP FUN2_2
+LOPA2:MOV CL,BPASS[DI-1]
+      CMP CL,IN_PWD[DI+1]
+	  JNE T2
+	  DEC DI
+	  CMP DI,0
+	  JNE LOPA2
+	  MOV AUTH,1
+FUN3_1:LEA DX,POINT2
+	  MOV AH,9
+	  INT 21H
+	  LEA DX,IN_GA
+	  MOV AH,10
+	  INT 21H
+	  LEA DX,TAG2
+	  MOV AH,9
+	  INT 21H
+	  MOV CL,IN_GA[1]
+	  CMP CL,0
+	  JE  FUN1
+	  MOVZX AX,CL
+	  MOV DI,OFFSET IN_GA
+	  ADD DI,AX
+	  ADD DI,2
+	  MOV AL,0
+	  MOV [DI],AL
+	  MOV SI,OFFSET GA1
+	  SUB SI,21
+	  MOV DI,OFFSET IN_GA
+	  MOV I,N
+	  JMP LOPA3
+FUN3_2:CMP AUTH,1
+       JNE FUN4
+	   MOV CL,IN_GA[1]
+	   MOV BX,0
+PRINT: ADD CL,-1
+       JS PRIN
+       MOV AH,02H
+       MOV DL,[SI][BX]
+	   INT 21H
+	   ADD BX,1
+	   JMP PRINT
+PRIN:  LEA DX,TAG2
+	  MOV AH,9
+	  INT 21H
+	  JMP CLEAR
+LOPA3:ADD I,-1
+      JS  T3
+	  ADD SI,21
+	  MOV CL,9
+LOPA4:MOV BL,CL
+      MOV AL,2[DI+BX]
+	  CMP AL,0[SI][BX]
+	  JNE LOPA3
+	  ADD CL,-1
+	  JS FUN3_2
+	  JMP LOPA4
+FUN4:MOV AX,WORD PTR [SI+11]
+    MOV BX,0080H
+    MUL BX
+    MOV BX,WORD PTR [SI+13]
+    DIV BX
+    MOV BX,000AH
+    MUL BX
+    MOV BL,[SI+10]
+    MOV BH,00H
+    DIV BX
+    MOV CX,AX
+    MOV AX,WORD PTR [SI+17]
+    MOV BX,0040H
+    MUL BX
+    MOV BX,WORD PTR [SI+15]
+    DIV BX
+    ADD AX,CX
+	MOV WORD PTR [SI+19],AX
+	CMP AX,100
+    JA  ALEVEL
+    CMP AX,50
+    JA  BLEVEL
+    CMP AX,10
+    JA  CLEVEL
+    JMP FLEVEL
+ALEVEL:   LEA DX,'A'
+     MOV AH,2
+	 INT 21H
+	  LEA DX,TAG2
+	  MOV AH,9
+	  INT 21H
+	 JMP CLEAR
+BLEVEL:   LEA DX,'B'
+     MOV AH,2
+	 INT 21H
+	  LEA DX,TAG2
+	  MOV AH,9
+	  INT 21H
+	 JMP CLEAR
+CLEVEL:  LEA DX,'C'
+     MOV AH,2
+	 INT 21H
+	  LEA DX,TAG2
+	  MOV AH,9
+	  INT 21H
+	 JMP CLEAR
+FLEVEL:   LEA DX,'F'
+     MOV AH,2
+	 INT 21H
+	  LEA DX,TAG2
+	  MOV AH,9
+	  INT 21H
+	 JMP CLEAR
+T1:  MOV AUTH,0
+      JMP FUN3_1
+T2:   LEA DX,TIP
+	  MOV AH,9
+	  INT 21H
+	  JMP FUN1
+T3:   LEA DX,TIP2
+      MOV AH,9
+	  INT 21H
+	  MOV AX,0
+      MOV BX,0
+	  MOV CX,0
+	  MOV DX,0
+	  MOV SI,0
+	  MOV DI,0 
+	  JMP FUN3_1
+CLEAR:MOV AX,0
+      MOV BX,0
+	  MOV CX,0
+	  MOV DX,0
+	  MOV SI,0
+	  MOV DI,0 
+	  JMP FUN1
+QUIT: MOV AH,4CH
+      INT 21H
+CODE ENDS
+     END START

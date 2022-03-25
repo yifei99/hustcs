@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{EC69B931-A716-4E89-B1D5-13548517C627}</ProjectGuid>
+    <RootNamespace>计网2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\DataStructure.h" />
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\Global.h" />
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\NetworkService.h" />
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\RandomEventEnum.h" />
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\RdtReceiver.h" />
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\RdtSender.h" />
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\stdafx.h" />
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\GBNRdtReceiver.h" />
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\GBNRdtSender.h" />
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\targetver.h" />
+    <ClInclude Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\Tool.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\stdafx.cpp" />
+    <ClCompile Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\GBN.cpp" />
+    <ClCompile Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\GBNRdtReceiver.cpp" />
+    <ClCompile Include="..\..\..\Documents\Tencent Files\349062884\FileRecv\模块二 RDT代码（学生用）\发布给学生的RDT代码\Windows VS2017\StopWait\GBNRdtSender.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

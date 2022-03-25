@@ -1,0 +1,28 @@
+﻿  1.cpp
+c:\users\dell\source\repos\计网\network-1\1.cpp(18): warning C4615: #pragma warning: 未知的用户警告类型
+c:\users\dell\source\repos\计网\network-1\1.cpp(33): warning C4473: “scanf_s”: 没有为格式字符串传递足够的参数
+  c:\users\dell\source\repos\计网\network-1\1.cpp(33): note: 占位符和其参数预计 2 可变参数，但提供的却是 1 参数
+  c:\users\dell\source\repos\计网\network-1\1.cpp(33): note: 缺失的可变参数 2 为格式字符串“%c”所需
+  c:\users\dell\source\repos\计网\network-1\1.cpp(33): note: 此参数用作缓冲区大小
+c:\users\dell\source\repos\计网\network-1\1.cpp(36): warning C4473: “scanf_s”: 没有为格式字符串传递足够的参数
+  c:\users\dell\source\repos\计网\network-1\1.cpp(36): note: 占位符和其参数预计 2 可变参数，但提供的却是 1 参数
+  c:\users\dell\source\repos\计网\network-1\1.cpp(36): note: 缺失的可变参数 2 为格式字符串“%c”所需
+  c:\users\dell\source\repos\计网\network-1\1.cpp(36): note: 此参数用作缓冲区大小
+c:\users\dell\source\repos\计网\network-1\1.cpp(76): warning C4473: “scanf_s”: 没有为格式字符串传递足够的参数
+  c:\users\dell\source\repos\计网\network-1\1.cpp(76): note: 占位符和其参数预计 2 可变参数，但提供的却是 1 参数
+  c:\users\dell\source\repos\计网\network-1\1.cpp(76): note: 缺失的可变参数 2 为格式字符串“%c”所需
+  c:\users\dell\source\repos\计网\network-1\1.cpp(76): note: 此参数用作缓冲区大小
+c:\users\dell\source\repos\计网\network-1\1.cpp(79): warning C4473: “scanf_s”: 没有为格式字符串传递足够的参数
+  c:\users\dell\source\repos\计网\network-1\1.cpp(79): note: 占位符和其参数预计 2 可变参数，但提供的却是 1 参数
+  c:\users\dell\source\repos\计网\network-1\1.cpp(79): note: 缺失的可变参数 2 为格式字符串“%c”所需
+  c:\users\dell\source\repos\计网\network-1\1.cpp(79): note: 此参数用作缓冲区大小
+c:\users\dell\source\repos\计网\network-1\1.cpp(89): warning C4473: “scanf_s”: 没有为格式字符串传递足够的参数
+  c:\users\dell\source\repos\计网\network-1\1.cpp(89): note: 占位符和其参数预计 2 可变参数，但提供的却是 1 参数
+  c:\users\dell\source\repos\计网\network-1\1.cpp(89): note: 缺失的可变参数 2 为格式字符串“%c”所需
+  c:\users\dell\source\repos\计网\network-1\1.cpp(89): note: 此参数用作缓冲区大小
+c:\users\dell\source\repos\计网\network-1\1.cpp(92): warning C4473: “scanf_s”: 没有为格式字符串传递足够的参数
+  c:\users\dell\source\repos\计网\network-1\1.cpp(92): note: 占位符和其参数预计 2 可变参数，但提供的却是 1 参数
+  c:\users\dell\source\repos\计网\network-1\1.cpp(92): note: 缺失的可变参数 2 为格式字符串“%c”所需
+  c:\users\dell\source\repos\计网\network-1\1.cpp(92): note: 此参数用作缓冲区大小
+c:\users\dell\source\repos\计网\network-1\1.cpp(189): warning C4244: “初始化”: 从“std::streamoff”转换到“int”，可能丢失数据
+  network-1.vcxproj -> C:\Users\dell\source\repos\计网\network-1\Debug\network-1.exe
