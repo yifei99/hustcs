@@ -1,0 +1,30 @@
+生物类
+Class Biology:
+id：（pk）
+name：名称（字符串）
+brief：简述
+infobox：（生物所属科目，别名等信息：数目不定）
+features：（形态特诊、生活习性等描述：数目不定）
+
+生物行为类
+Class BioBehavior:
+id：（pk）
+behaviorBody：行为主体（对应生物类Biology）
+behaviorCategory：行为分类：（如捕食行为）
+behaviorDescription：行为描述：（行为的具体描述）
+	
+生物行为图片类
+Class BioBehaviorPicture:
+id：（pk）
+picBody：行为主体（对应生物类Biology）
+picCategory：行为图片分类：（对应生物类BioBehavior）
+picDescription：行为图片描述：（行为的具体描述）
+picPath：（图片相对路径）
+picSource：（图片来源）
+生物视频类
+Class BioBehaviorVideo:
+id：（pk）
+vidBody：行为主体（对应生物类Biology）
+vidPath：（视频相对路径）
+vidSource：（视频来源）
+

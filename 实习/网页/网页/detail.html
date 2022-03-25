@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生物信息</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class=body>
+        <div class=container>
+            <h1>生物信息</h1>
+        </div>
+        <div class=container>
+            <h2>生物行为视频描述</h2>
+            <video src="./vedio/ele.mp4" controls="controls">
+                your browser does not support the vedio tag
+            </video>
+        </div>
+        <div class=container>
+            <h2>生物行为图片描述</h2>
+            <div class=pictures id="pictures_change">
+                <img :src="imgArr[index]" />
+                <a href="javascipt:void(0)" v-show="index!=0" @click="prev" class="prev"> &lt; </a>
+                <a href="javascipt:void(0)" v-show="index<imgArr.length-1" @click="next" class="next"> &gt; </a>
+            </div>
+        </div>
+        <div id="item_value" class="basic-info container">
+            <h2>生物行为文字描述</h2>
+            <dl v-for="(it,index) in item" v-for="(it,index) in value" class="basicInfo-block basicInfo-left">
+                <dt class="basicInfo-item name">{{item[index]}}</dt>
+                <dd class="basicInfo-item value">{{value[index]}}</dd>
+            </dl>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        var item_value = new Vue({
+            el: "#item_value",
+            data: {
+                item: ["中文学名", "拉丁学名", "别称", "界", "门", "亚门", "纲", "亚纲", "目", "属", "种", "分布区域"],
+                value: ["大象", "Elephantidae", "大象", "动物界", "脊索动物门", "哺乳纲", "真兽亚纲", "长鼻目", "象科", "亚洲象属、非洲象属", "普通非洲象、非洲森林象、亚洲象", "非洲撒哈拉沙漠以南和南亚及东南亚以至中国南部边境"]
+            },
+            created() {
+                this.axios.get('').then(response => {
+                    console.log(response.data)
+                })
+            }
+        })
+        var pictures_change = new Vue({
+            el: "#pictures_change",
+            data: {
+                imgArr: [
+                    "./image/ele1.jpg",
+                    "./image/ele2.jpg",
+                    "./image/ele3.jpg",
+                    "./image/ele4.jpg",
+                    "./image/ele5.jpg",
+                ],
+                index: 0
+            },
+            methods: {
+                prev: function () {
+                    this.index--;
+                },
+                next: function () {
+                    this.index++;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
